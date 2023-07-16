@@ -1,2 +1,6 @@
 scan:
   package: com.ljm.component
+
+server:
+  port:
+    demo: com.aaa.bbb
