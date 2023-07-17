@@ -1,17 +1,15 @@
 package com.ljm.core;
 
-import java.io.File;
 import java.io.InputStream;
 import java.util.*;
-import java.util.logging.Logger;
 
-public class ApplicationReader {
+public class PropertiesReader {
 
     private Map<String, Object> propertiesMap = new HashMap<>();
 
     private final String DELIMITER = ":";
 
-    public ApplicationReader(){
+    public PropertiesReader(){
         startRead();
     }
 
@@ -53,7 +51,7 @@ public class ApplicationReader {
     }
 
     public static void main(String[] args) {
-        ApplicationReader reader = new ApplicationReader();
+        PropertiesReader reader = new PropertiesReader();
         System.out.println(reader.propertiesMap);
     }
 }

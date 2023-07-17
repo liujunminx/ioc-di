@@ -1,5 +1,6 @@
 package com.ljm.component;
 
+
 import com.ljm.annotation.Component;
 
 @Component

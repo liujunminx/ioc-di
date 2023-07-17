@@ -1,2 +1,6 @@
-package com.ljm.core;public class ServiceB {
+package com.ljm.core;
+
+public interface ServiceB {
+
+    void hello();
 }
