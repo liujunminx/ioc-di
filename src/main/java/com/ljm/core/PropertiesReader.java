@@ -50,8 +50,4 @@ public class PropertiesReader {
         return propertiesMap;
     }
 
-    public static void main(String[] args) {
-        PropertiesReader reader = new PropertiesReader();
-        System.out.println(reader.propertiesMap);
-    }
 }

@@ -2,12 +2,17 @@ package com.ljm.core;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.Enumeration;
 
 public class IocHelper {
 
-    private BeanRegistry registry = new ConcreteBeanFactory();
+    private BeanRegistry registry;
+
+    public IocHelper(BeanRegistry registry){
+        this.registry = registry;
+    }
 
     public void scanComponentPackage(String packageName) throws IOException, ClassNotFoundException {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
@@ -27,7 +32,7 @@ public class IocHelper {
                             if (file.getName().endsWith(".class")){
                                 String beanName = packageName + "." + file.getName().substring(0, file.getName().length() - 6);
                                 Class<?> clazz = Class.forName(beanName);
-                                registry.registerBean(beanName, clazz);
+                                registry.registerBean(clazz);
                             }
                         }
                     }
@@ -35,5 +40,4 @@ public class IocHelper {
             }
         }
     }
-
 }

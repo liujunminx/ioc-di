@@ -2,9 +2,9 @@ package com.ljm.core;
 
 public interface BeanRegistry {
 
-    void registerBean(String beanName, Class<?> clazz);
+    void registerBean(Class<?> clazz);
 
-    void removeBean(String beanName);
+    void removeBean(Class<?> clazz);
 
-    boolean containsBean(String beanName);
+    boolean containsBean(Class<?> clazz);
 }
